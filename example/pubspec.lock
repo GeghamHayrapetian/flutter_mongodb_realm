@@ -264,7 +264,7 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: "3a65b118164d0c837b32118cf0415e507fe7ddaa"
+      resolved-ref: "33a56aacae604a045dc3d8b4f95ae816519e3a17"
       url: "git://github.com/GeghamHayrapetian/streams_channel"
     source: git
     version: "0.3.0"
