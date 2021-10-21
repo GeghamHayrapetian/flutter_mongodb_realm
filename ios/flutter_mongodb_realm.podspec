@@ -19,7 +19,7 @@ A new Flutter plugin.
 
   # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
-  s.swift_version = '5.0'
-  s.dependency 'StitchSDK', '= 6.4.1'
+  s.swift_version = '5.0' 
+  s.dependency 'StitchSDK', '= 5.0.0'
   s.dependency 'RealmSwift', '=10.1.4'
 end
