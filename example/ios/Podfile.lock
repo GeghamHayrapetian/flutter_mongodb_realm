@@ -1,0 +1,160 @@
+PODS:
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
+  - apple_sign_in (0.0.1):
+    - Flutter
+  - FBSDKCoreKit (5.15.1):
+    - FBSDKCoreKit/Basics (= 5.15.1)
+    - FBSDKCoreKit/Core (= 5.15.1)
+  - FBSDKCoreKit/Basics (5.15.1)
+  - FBSDKCoreKit/Core (5.15.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.15.1):
+    - FBSDKLoginKit/Login (= 5.15.1)
+  - FBSDKLoginKit/Login (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
+  - Flutter (1.0.0)
+  - flutter_facebook_login (0.0.1):
+    - FBSDKCoreKit (~> 5.5)
+    - FBSDKLoginKit (~> 5.5)
+    - Flutter
+  - flutter_mongodb_realm (0.0.1):
+    - Flutter
+    - RealmSwift (= 10.5.2)
+    - StitchSDK (= 6.4.0)
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
+  - google_sign_in (0.0.1):
+    - Flutter
+    - GoogleSignIn (~> 5.0)
+  - GoogleSignIn (5.0.2):
+    - AppAuth (~> 1.2)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GTMAppAuth (1.2.2):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher/Core (~> 1.5)
+  - GTMSessionFetcher/Core (1.7.0)
+  - mongo-embedded-c-driver (1.13.0-4.0.4)
+  - mongo_embedded (4.0.4)
+  - mongoc_embedded (4.0.4):
+    - mongo-embedded-c-driver (~> 1.13.0-4.0.4)
+    - mongo_embedded (~> 4.0.4)
+  - MongoMobile (0.1.0):
+    - mongo_embedded (~> 4.0.4)
+    - mongoc_embedded (~> 4.0.4)
+    - MongoSwift (~> 0.1.0)
+  - MongoSwift (0.1.0):
+    - mongo-embedded-c-driver (~> 1.13.0-4.0.0)
+  - Realm (10.5.2):
+    - Realm/Headers (= 10.5.2)
+  - Realm/Headers (10.5.2)
+  - RealmSwift (10.5.2):
+    - Realm (= 10.5.2)
+  - StitchCore (6.4.0):
+    - StitchCoreSDK (= 6.4.0)
+  - StitchCoreLocalMongoDBService (6.4.0):
+    - MongoMobile (= 0.1.0)
+    - StitchCoreSDK (= 6.4.0)
+  - StitchCoreRemoteMongoDBService (6.4.0):
+    - StitchCoreLocalMongoDBService (= 6.4.0)
+    - StitchCoreSDK (= 6.4.0)
+  - StitchCoreSDK (6.4.0):
+    - MongoSwift (= 0.1.0)
+  - StitchRemoteMongoDBService (6.4.0):
+    - StitchCore (= 6.4.0)
+    - StitchCoreRemoteMongoDBService (= 6.4.0)
+  - StitchSDK (6.4.0):
+    - StitchSDK/StitchSDK (= 6.4.0)
+  - StitchSDK/StitchRemoteMongoDBService (6.4.0):
+    - StitchRemoteMongoDBService (= 6.4.0)
+  - StitchSDK/StitchSDK (6.4.0):
+    - StitchSDK/StitchRemoteMongoDBService
+  - streams_channel (0.0.1):
+    - Flutter
+  - Toast (4.0.0)
+
+DEPENDENCIES:
+  - apple_sign_in (from `.symlinks/plugins/apple_sign_in/ios`)
+  - Flutter (from `Flutter`)
+  - flutter_facebook_login (from `.symlinks/plugins/flutter_facebook_login/ios`)
+  - flutter_mongodb_realm (from `.symlinks/plugins/flutter_mongodb_realm/ios`)
+  - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
+  - google_sign_in (from `.symlinks/plugins/google_sign_in/ios`)
+  - streams_channel (from `.symlinks/plugins/streams_channel/ios`)
+
+SPEC REPOS:
+  trunk:
+    - AppAuth
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
+    - mongo-embedded-c-driver
+    - mongo_embedded
+    - mongoc_embedded
+    - MongoMobile
+    - MongoSwift
+    - Realm
+    - RealmSwift
+    - StitchCore
+    - StitchCoreLocalMongoDBService
+    - StitchCoreRemoteMongoDBService
+    - StitchCoreSDK
+    - StitchRemoteMongoDBService
+    - StitchSDK
+    - Toast
+
+EXTERNAL SOURCES:
+  apple_sign_in:
+    :path: ".symlinks/plugins/apple_sign_in/ios"
+  Flutter:
+    :path: Flutter
+  flutter_facebook_login:
+    :path: ".symlinks/plugins/flutter_facebook_login/ios"
+  flutter_mongodb_realm:
+    :path: ".symlinks/plugins/flutter_mongodb_realm/ios"
+  fluttertoast:
+    :path: ".symlinks/plugins/fluttertoast/ios"
+  google_sign_in:
+    :path: ".symlinks/plugins/google_sign_in/ios"
+  streams_channel:
+    :path: ".symlinks/plugins/streams_channel/ios"
+
+SPEC CHECKSUMS:
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  apple_sign_in: 7716c7ddfa195aeab7dec0dc374ef4ff45d1adb4
+  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
+  FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  flutter_facebook_login: cfb5659f686b1c575ef205c6b6fd20db9679d3c4
+  flutter_mongodb_realm: 417e1e98539a6a182675f1ebaa813d8722c41b7b
+  fluttertoast: 6122fa75143e992b1d3470f61000f591a798cc58
+  google_sign_in: 6bd214b9c154f881422f5fe27b66aaa7bbd580cc
+  GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
+  GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
+  GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  mongo-embedded-c-driver: b46360baa15fc142baae80628822f26663220bde
+  mongo_embedded: e413134eb6b60544e7278add03007f8fe384a00c
+  mongoc_embedded: 41aadbb756b07070d6f0471192a84750cb42c580
+  MongoMobile: 988e8d2fd322761d6358570dde8a2b3d44801823
+  MongoSwift: e20f86eae1beb06bbba49c2d73bb570961cc4c85
+  Realm: 2e1bc0d28301006176692da234deff51f867d5ae
+  RealmSwift: a522ad39715e8b4e491af4460059bc32b84f5a9b
+  StitchCore: 344f59b617dd5be8c32f0a2fdef39fb96591fc33
+  StitchCoreLocalMongoDBService: 26c339ea689d9633b33e266274406e7b4c3f2786
+  StitchCoreRemoteMongoDBService: e328908dde887cb3a9e3465793b37b69cb19c0e7
+  StitchCoreSDK: 4c4b847470229535a66f8ba6b2911c2eafc0d866
+  StitchRemoteMongoDBService: f5befbafb01720c4d7193e054907fa0ebff569f0
+  StitchSDK: 198397b6400c1fdd58e3e78300fe60374c700fe9
+  streams_channel: 849ac8ed458ddc0e28b0adfe4b648cc86e519d09
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+
+PODFILE CHECKSUM: af6b891fb448119e2e3d0a226fcad7567aa13204
+
+COCOAPODS: 1.11.2

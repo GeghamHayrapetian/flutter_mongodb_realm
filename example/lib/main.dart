@@ -44,12 +44,11 @@ class _MyAppState extends State<MyApp> {
 
       // login Anonymously
 
-
       // var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJteXN0aXRjaGFwcC1manBtbiIsImV4cCI6MTYyMTc5MzQyMSwiaWF0IjoxNjExODMwNjU1LCJzdWIiOiI1ZTlkNzEwZmJjZDg5NTIxOWM2YzFmMWIiLCJ1c2VySWQiOiI1ZTlkNzEwZmJjZDg5NTIxOWM2YzFmMWIifQ.kNowkTYV5J_xoR_aVowuattEcazesM09RmTfzpqJM2M";
       // var mongoUser = await client.auth.login(Credentials.jwt(token));
 
-   ///   CoreRealmUser mongoUser =
-   //        await client.auth.loginWithCredential(AnonymousCredential()
+      ///   CoreRealmUser mongoUser =
+      //        await client.auth.loginWithCredential(AnonymousCredential()
 
 //          UserPasswordCredential(
 //              username: 'naamahasson1@gmail.com',//"kfir25816@gmail.com",
@@ -67,12 +66,12 @@ class _MyAppState extends State<MyApp> {
 //          FacebookCredential(permissions: ["email"])
 //          );
 
-     // if (mongoUser != null) {
-     //   print("logged in as ${mongoUser.id ?? '?'}");
-     // }
-     // else {
-     //   print("wrong pass or username");
-     // }
+      // if (mongoUser != null) {
+      //   print("logged in as ${mongoUser.id ?? '?'}");
+      // }
+      // else {
+      //   print("wrong pass or username");
+      // }
 
       // sign out
 
@@ -92,7 +91,7 @@ class _MyAppState extends State<MyApp> {
 //      deleteData(); /// DONE ON WEB
 //        updateData(); /// DONE ON WEB
 
- //     watchData();
+      //     watchData();
 
       /// DONE ON WEB
 //      aggregateCollection(); //TODO: check
@@ -446,7 +445,7 @@ class _MyAppState extends State<MyApp> {
         child: Column(
           children: <Widget>[
             Text('Running on: \n'),
-            RaisedButton(
+            ElevatedButton(
               child: Text("Reset Password"),
               onPressed: () async {
                 try {
