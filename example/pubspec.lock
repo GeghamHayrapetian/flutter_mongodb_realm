@@ -264,11 +264,7 @@ packages:
     description:
       path: "."
       ref: master
-<<<<<<< Updated upstream
-      resolved-ref: "33a56aacae604a045dc3d8b4f95ae816519e3a17"
-=======
       resolved-ref: "1f847780c128ac06601e17e740182f553dcbc57d"
->>>>>>> Stashed changes
       url: "git://github.com/GeghamHayrapetian/streams_channel"
     source: git
     version: "0.3.0"
