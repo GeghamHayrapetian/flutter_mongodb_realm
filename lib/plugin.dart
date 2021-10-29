@@ -220,7 +220,7 @@ class FlutterMongoRealm {
       jsStream.listen((event) {
         var eventDetail = (event as CustomEvent).detail;
 
-        Map<String, dynamic> map = json.decode(eventDetail);
+        Map<dynamic, dynamic> map = json.decode(eventDetail.toString());
 
         if (map['_id'] is String == false) {
           map['_id'] = ObjectId.parse(map['_id']);
