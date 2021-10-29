@@ -220,7 +220,7 @@ class FlutterMongoRealm {
       jsStream.listen((event) {
         var eventDetail = (event as CustomEvent).detail;
 
-        var map = json.decode(eventDetail ?? "{}");
+        var map = json.decode(eventDetail);
 
         if (map['_id'] is String == false) {
           map['_id'] = ObjectId.parse(map['_id']);
@@ -294,7 +294,7 @@ class FlutterMongoRealm {
         if (eventDetail == null) {
           controller.add(null!);
         } else {
-          controller.add(eventDetail);
+          controller.add(eventDetail as Map);
         }
       });
 
