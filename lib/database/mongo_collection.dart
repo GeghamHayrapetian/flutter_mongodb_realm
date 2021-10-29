@@ -35,8 +35,7 @@ class MongoCollection {
   /// The namespace of this collection, i.e. the database and collection names together.
   String get namespace => "$collectionName.$databaseName";
 
-  MongoCollection(
-      {required this.collectionName, required this.databaseName}) {
+  MongoCollection({required this.collectionName, required this.databaseName}) {
 //    if(kIsWeb){
 //      FlutterMongoRealm.setupWatchCollection(collectionName, databaseName);//, filter: BsonDocument(fixFilter).toJson());
 //    }
@@ -75,7 +74,7 @@ class MongoCollection {
 
       if (filter is Map<String, dynamic>) {
         // convert 'QuerySelector' into map, too
-        filter?.forEach((dynamic key, value) {
+        filter.forEach((dynamic key, value) {
           if (value is QueryOperator) {
             filter[key] = value.values;
           }
@@ -106,7 +105,7 @@ class MongoCollection {
 
       if (filter is Map<String, dynamic>) {
         // convert 'QuerySelector' into map, too
-        filter?.forEach((dynamic key, value) {
+        filter.forEach((dynamic key, value) {
           if (value is QueryOperator) {
             filter[key] = value.values;
           }
@@ -134,7 +133,7 @@ class MongoCollection {
 
       if (filter is Map<String, dynamic>) {
         // convert 'QuerySelector' into map, too
-        filter?.forEach((key, value) {
+        filter.forEach((key, value) {
           if (value is QueryOperator) {
             filterCopy[key] = value.values;
           } else
@@ -159,7 +158,7 @@ class MongoCollection {
       sort: sortMap == null ? null : jsonEncode(sortMap),
     ));
 
-    if (resultJson == null) {
+    if (resultJson.isEmpty) {
       return [];
     }
 
@@ -179,7 +178,7 @@ class MongoCollection {
 
       if (filter is Map<String, dynamic>) {
         // convert 'QuerySelector' into map, too
-        filter?.forEach((key, value) {
+        filter.forEach((key, value) {
           if (value is QueryOperator) {
             filterCopy[key] = value.values;
           } else
@@ -201,7 +200,7 @@ class MongoCollection {
     ));
 
     // return null document for empty query
-    if (resultJson == null) {
+    if (resultJson.isEmpty) {
       return null;
     }
 
@@ -216,7 +215,7 @@ class MongoCollection {
 
       if (filter is Map<String, dynamic>) {
         // convert 'QuerySelector' into map, too
-        filter?.forEach((dynamic key, value) {
+        filter.forEach((dynamic key, value) {
           if (value is QueryOperator) {
             filter[key] = value.values;
           }
@@ -244,7 +243,7 @@ class MongoCollection {
 
     if (filter is Map<String, dynamic>) {
       // convert 'QuerySelector' into map, too
-      filter?.forEach((dynamic key, value) {
+      filter.forEach((dynamic key, value) {
         if (value is QueryOperator) {
           filter[key] = value.values;
         }
@@ -290,7 +289,7 @@ class MongoCollection {
 
     if (filter is Map<String, dynamic>) {
       // convert 'QuerySelector' into map, too
-      filter?.forEach((dynamic key, value) {
+      filter.forEach((dynamic key, value) {
         if (value is QueryOperator) {
           filter[key] = value.values;
         }
@@ -339,7 +338,6 @@ class MongoCollection {
   /// Watches a collection. The provided BSON document will be used as a match
   /// expression filter on the change events coming from the stream.
   Stream watchWithFilter(Map<String, dynamic> filter) {
-    assert(filter != null);
     // convert 'QuerySelector' into map, too
     filter.forEach((key, value) {
       if (value is QueryOperator) {

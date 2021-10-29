@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter_mongodb_realm/auth/credentials/apple_credential.dart';
 
 //import 'package:flutter_facebook_login/flutter_facebook_login.dart';
@@ -31,7 +30,8 @@ class MongoRealmAuth {
   /// Logs in as a user with the given credentials associated with an
   /// authentication provider.
   @deprecated
-  Future<CoreRealmUser?> loginWithCredential(StitchCredential credential) async {
+  Future<CoreRealmUser?> loginWithCredential(
+      StitchCredential credential) async {
     var result;
 
     if (credential is AnonymousCredential) {
@@ -56,9 +56,9 @@ class MongoRealmAuth {
       );
 
       try {
-        var authCode =
-            await (_googleLoginWrapper.handleSignInAndGetAuthServerCode() as FutureOr<String>);
-        print(authCode ?? 'nothing');
+        var authCode = await (_googleLoginWrapper
+            .handleSignInAndGetAuthServerCode() as FutureOr<String>);
+        print(authCode);
         result = await FlutterMongoRealm.signInWithGoogle(authCode);
       } on Exception catch (e) {
         print(e);
@@ -84,7 +84,8 @@ class MongoRealmAuth {
   Future<bool?> logout() async {
     var result = await FlutterMongoRealm.logout();
 
-    bool loggedWithGoogle = await (_googleLoginWrapper.isLogged as FutureOr<bool>);
+    bool loggedWithGoogle =
+        await (_googleLoginWrapper.isLogged as FutureOr<bool>);
 //    bool loggedWithFacebook = await _facebookLoginWrapper.isLogged;
 //
     if (loggedWithGoogle) await _googleLoginWrapper.handleSignOut();
