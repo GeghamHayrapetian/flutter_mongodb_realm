@@ -68,7 +68,8 @@ class MongoDocument {
 
   /// Parses a string in MongoDB Extended JSON format to a Document
   static MongoDocument parse(data) {
-    Map<String, Object> map = json.decode(data);
+    var map = json.decode(data);
+    Map<String, Object>? map2 = Map.from(map);
 //    if(kIsWeb){
 //      map = FlutterMongoRealm.customEventToMap(data);
 //    }
@@ -76,13 +77,13 @@ class MongoDocument {
 //      map = json.decode(data);
 //    }
     // fix MongoDB bullshit
-    map.forEach((key, value) {
+    map2.forEach((key, value) {
       if (value is LinkedHashMap) {
-        map[key] = fixMapMismatchedTypes(value);
+        map2[key] = fixMapMismatchedTypes(value);
       }
     });
 
-    return MongoDocument(map);
+    return MongoDocument(map2);
   }
 
   /// Put the given key/value pair into this Document and return this.

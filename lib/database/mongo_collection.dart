@@ -303,7 +303,7 @@ class MongoCollection {
       collectionName: this.collectionName,
       databaseName: this.databaseName,
       filter: BsonDocument(filter).toJson(),
-      update: BsonDocument(update.values).toJson(),
+      update: jsonEncode(update.values),
     ));
 
     return results;

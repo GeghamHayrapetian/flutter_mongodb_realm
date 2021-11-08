@@ -119,8 +119,8 @@ class FlutterMongoRealm {
       databaseName: databaseName,
       filter: filter,
       limit: limit,
-      sort: sort!,
-      projection: projection!,
+      sort: sort,
+      projection: projection,
     );
   }
 
